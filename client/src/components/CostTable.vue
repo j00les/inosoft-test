@@ -16,7 +16,7 @@ export default {
       <ChevronIcon :costDetailHeader="true" />
     </div>
 
-    <table class="table-fixed border-separate border-spacing-y-2 border-red-400 border">
+    <table class="table-fixed border-separate border-spacing-y-2">
       <thead class="border bg-secondary">
         <tr class="text-sm text-left w-[20rem]">
           <th>Description</th>
@@ -31,6 +31,7 @@ export default {
           <th>Sub Total</th>
           <th>Total</th>
           <th>Charge To</th>
+          <th></th>
         </tr>
       </thead>
 
@@ -43,6 +44,40 @@ export default {
         <CostRow />
       </tbody>
     </table>
+    <div class="flex justify-between">
+      <h2>exchange rate 1 usd = 3443AED</h2>
+
+      <section class="flex items-center w-[27.5rem] justify-between">
+        <article>
+          <div class="flex border">
+            <p>AED in total</p>
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+          </div>
+          <div class="flex border">
+            <p>USD in total</p>
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+          </div>
+        </article>
+        <div class="border bg-primary">
+          <button class="p-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+            </svg>
+          </button>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 <style></style>
