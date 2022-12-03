@@ -10,19 +10,19 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="border border-yellow-400 w-fit mx-auto">
     <div class="relative w-[7em]">
       <h1 class="text-primary capitalize">cost detail</h1>
       <ChevronIcon :costDetailHeader="true" />
     </div>
 
-    <table class="table-fixed border-separate border-spacing-y-2">
+    <table class="table-fixed border-separate border-spacing-y-2 border p-1">
       <thead class="border bg-secondary">
         <tr class="text-sm text-left w-[20rem]">
-          <th>Description</th>
-          <th>Qty</th>
-          <th>UOM</th>
-          <th>Unit Price</th>
+          <th class="px-14">Description</th>
+          <th class="px-10">Qty</th>
+          <th class="px-10">UOM</th>
+          <th class="mx-10 w-[20rem]">Unit Price</th>
           <th>Discount (%)</th>
           <th>VAT (%)</th>
           <th></th>
@@ -47,9 +47,9 @@ export default {
     <div class="flex justify-between">
       <h2>exchange rate 1 usd = 3443AED</h2>
 
-      <section class="flex items-center w-[27.5rem] justify-between">
+      <section class="flex items-center w-[27.5rem] justify-between h-auto">
         <article>
-          <div class="flex border">
+          <div class="flex border p-1 gap-2">
             <p>AED in total</p>
             <p>0</p>
             <p>0</p>

@@ -8,7 +8,7 @@ export default {
 
 <template>
   <tr class="border border-red-500">
-    <td class="w-10 shadow-sm">
+    <td class="w-10 shadow-sm" id="description">
       <Input :description="true" />
     </td>
 
@@ -70,5 +70,3 @@ export default {
     </td>
   </tr>
 </template>
-
-<style></style>

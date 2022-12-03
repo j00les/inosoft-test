@@ -27,8 +27,8 @@ export default {
 };
 </script>
 <template>
-  <div v-if="uom" class="w-full">
-    <select placeholder="Select an option" name="UOM" id="UOM" class="w-full p-1 bg-semiwhite">
+  <div v-if="uom" class="w-full mx-3">
+    <select placeholder="Select an option" name="UOM" id="UOM" class="w-full p-3 mx-3 bg-semiwhite">
       <option v-for="data in UOMData" :key="`UOM-${data.id}`" :value="data.name">
         {{ data.name }}
       </option>

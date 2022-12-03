@@ -21,19 +21,19 @@ export default {
   <input
     v-if="description"
     placeholder="Description"
-    class="w-full  bg-semiwhite p-1 rounded-sm"
+    class="w-full bg-semiwhite p-3 rounded-sm"
     type="text"
   />
   <input
     v-else-if="quantity"
     placeholder="Qty"
-    class="w-full bg-semiwhite border-blue-200 p-1 rounded-sm"
+    class="w-full bg-semiwhite mx-3 p-3 border-blue-200 rounded-sm"
     type="number"
   />
   <input
     v-else-if="unitPrice"
     placeholder="Unit Price"
-    class="w-full bg-semiwhite border-blue-200 p-1 rounded-sm"
+    class="w-full bg-semiwhite border-blue-200 p-3 rounded-sm mx-4"
     type="number"
   />
   <input

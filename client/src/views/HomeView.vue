@@ -1,10 +1,13 @@
 <script>
 import { mapState, mapActions } from "vuex";
+
 import CostTable from "@/components/CostTable.vue";
+import Button from "@/components/Button.vue";
 
 export default {
   components: {
     CostTable,
+    Button,
   },
   methods: {
     ...mapActions(["fetchUOM", "fetchCompanies", "fetchCurrencies"]),
@@ -21,10 +24,14 @@ export default {
 </script>
 
 <template>
-  <main class="border mx-auto p-20 flex flex-col">
-    <section><p>lanjut tar</p></section>
-    <section class="mx-auto">
-      <CostTable />
-    </section>
-  </main>
+  <div class="border w-fit mx-auto p-20 flex flex-col">
+    <!-- component b -->
+    <CostTable />
+
+    <div class="self-end flex gap-7 mt-5 h-auto">
+      <Button :cancel="true" />
+      <Button :draft="true" />
+      <Button :submit="true" />
+    </div>
+  </div>
 </template>
