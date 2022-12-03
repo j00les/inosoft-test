@@ -10,8 +10,6 @@ export default {
     unitPrice: Boolean,
     discount: Boolean,
     vat: Boolean,
-    ["vat-amount"]: Boolean,
-    ["sub-total"]: Boolean,
     total: Boolean,
     chargeTo: Boolean,
   },
@@ -21,25 +19,38 @@ export default {
   <input
     v-if="description"
     placeholder="Description"
-    class="w-full bg-semiwhite p-3 rounded-sm"
+    class="w-full bg-semiwhite p-3 rounded-sm ml-2"
     type="text"
   />
   <input
     v-else-if="quantity"
     placeholder="Qty"
-    class="w-full bg-semiwhite mx-3 p-3 border-blue-200 rounded-sm"
+    class="w-[5rem] bg-semiwhite p-3 rounded-sm ml-[1.2rem]"
     type="number"
   />
+
   <input
     v-else-if="unitPrice"
     placeholder="Unit Price"
-    class="w-full bg-semiwhite border-blue-200 p-3 rounded-sm mx-4"
+    class="w-[7rem] bg-semiwhite p-3 rounded-sm ml-[1.3rem]"
+    type="number"
+  />
+
+  <input
+    v-else-if="discount"
+    placeholder="0"
+    class="w-[6rem] bg-semiwhite border-blue-200 p-3 rounded-sm ml-[.7rem]"
     type="number"
   />
   <input
-    v-else-if="discount"
-    class="w-full bg-semiwhite border-blue-200 p-1 rounded-sm"
+    placeholder="0"
+    v-else-if="vat"
+    class="w-[6rem] p-3 ml-[.7rem] bg-semiwhite rounded-sm"
     type="number"
   />
-  <input v-else-if="vat" class="w-full border-blue-200 bg-semiwhite p-1 rounded-sm" type="number" />
 </template>
+<style>
+input::placeholder {
+  color: black
+}
+</style>

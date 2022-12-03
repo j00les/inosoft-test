@@ -33,11 +33,11 @@ class Controller extends BaseController {
         $currencies = [
             [
                 'id' => 1,
-                'name' => 'usd',
+                'name' => 'USD',
             ],
             [
                 'id' => 2,
-                'name' => 'aed',
+                'name' => 'AED',
             ],
         ];
 
@@ -46,8 +46,8 @@ class Controller extends BaseController {
 
     function getCompanies() {
         $companies = [
-            ['id' => 1, 'name' => 'PT.Inosoft Trans Sistem'],
-            ['id' => 2, 'name' => 'PT.Makmur Jaya Abadi'],
+            ['id' => 1, 'name' => 'PT.INOSOFT TRANS SISTEM'],
+            ['id' => 2, 'name' => 'PT.MAKMUR JAYA ABADI'],
         ];
         return $companies;
     }

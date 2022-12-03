@@ -27,38 +27,53 @@ export default {
 };
 </script>
 <template>
-  <div v-if="uom" class="w-full mx-3">
-    <select placeholder="Select an option" name="UOM" id="UOM" class="w-full p-3 mx-3 bg-semiwhite">
-      <option v-for="data in UOMData" :key="`UOM-${data.id}`" :value="data.name">
-        {{ data.name }}
-      </option>
-    </select>
-  </div>
+  <select
+    v-if="uom"
+    placeholder="Select an option"
+    name="UOM"
+    id="UOM"
+    class="w-full ml-[.7rem] p-3 bg-semiwhite"
+  >
+    <option v-for="data in UOMData" :key="`UOM-${data.id}`" :value="data.name">
+      {{ data.name }}
+    </option>
+  </select>
 
-  <div v-else-if="currency" class="rounded-sm">
-    <select
-      placeholder="Select an option"
-      name="currency"
-      id="currency"
-      class="w-full p-1 bg-semiwhite"
+  <select
+    v-else-if="currency"
+    placeholder="Select an option"
+    name="currency"
+    id="currency"
+    class="w-[5rem] p-3 bg-semiwhite"
+  >
+    <option
+      :value="data.name"
+      class="uppercase"
+      v-for="data in currencies"
+      :key="`currency-${data.id}`"
     >
-      <option
-        :value="data.name"
-        class="uppercase"
-        v-for="data in currencies"
-        :key="`currency-${data.id}`"
-      >
-        {{ data.name }}
-      </option>
-    </select>
-  </div>
-  <div v-else-if="chargeTo" class="rounded-sm">
-    <select name="currency" id="currency" class="w-full p-1 bg-semiwhite">
-      <option value="" disabled selected>Select your option</option>
-      <option class="uppercase" v-for="data in companies" :key="`company-${data.id}`">
-        {{ data.name }}
-      </option>
-      <ChevronIcon />
-    </select>
-  </div>
+      {{ data.name }}
+    </option>
+  </select>
+
+  <select
+    v-else-if="chargeTo"
+    name="currency"
+    id="currency"
+    class="w-[14rem] p-3 bg-semiwhite ml-3"
+  >
+    <option value="" disabled selected>Select your option</option>
+    <option class="uppercase" v-for="data in companies" :key="`company-${data.id}`">
+      {{ data.name }}
+    </option>
+    <ChevronIcon />
+  </select>
 </template>
+<style>
+option {
+  color: black;
+}
+select {
+  color: black;
+}
+</style>

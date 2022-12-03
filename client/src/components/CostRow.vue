@@ -7,29 +7,25 @@ export default {
 </script>
 
 <template>
-  <tr class="border border-red-500">
-    <td class="w-10 shadow-sm" id="description">
+  <tr class="border">
+    <td class="drop-shadow-custom" id="description">
       <Input :description="true" />
     </td>
-
-    <td class="w-20 shadow-sm">
+    <td class="w-20 drop-shadow-custom">
       <Input :quantity="true" />
     </td>
-
-    <td class="w-20 shadow-sm">
+    <td class="drop-shadow-custom">
       <Dropdown :uom="true" />
     </td>
-    <td class="w-24 shadow-sm">
+    <td class="w-24 drop-shadow-custom">
       <Input :unitPrice="true" />
     </td>
-    <td class="w-20 shadow-sm">
+    <td class="w-20 drop-shadow-custom">
       <Input :discount="true" />
     </td>
-
-    <td class="w-20 shadow-sm">
+    <td class="w-20 drop-shadow-custom">
       <Input :vat="true" />
     </td>
-
     <td>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -41,21 +37,21 @@ export default {
         <path stroke-linecap="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
       </svg>
     </td>
-    <td class="shadow-sm">
+    <td class="drop-shadow-custom">
       <Dropdown :currency="true" />
     </td>
-    <td class="shadow-sm">
-      <p>0.00</p>
+    <td class="w-[2rem]">
+      <p class="ml-5 w-[5rem]">0.00</p>
     </td>
     <td>
-      <p>0.00</p>
+      <p class="ml-5 w-[5rem]">0.00</p>
     </td>
     <td>
-      <p>0.00</p>
+      <p class="ml-2">0.00</p>
     </td>
-    <td><Dropdown :chargeTo="true" /></td>
+    <td class="drop-shadow-custom"><Dropdown :chargeTo="true" /></td>
     <td>
-      <button class="border rounded-sm p-1">
+      <button class="drop-shadow-custom rounded-sm p-3 mx-2 bg-grayer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -70,3 +66,9 @@ export default {
     </td>
   </tr>
 </template>
+<style>
+td {
+  padding: 15px 0px 15px 0px;
+
+}
+</style>

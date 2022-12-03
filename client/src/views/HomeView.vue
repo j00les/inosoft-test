@@ -18,17 +18,15 @@ export default {
     companies: "companies",
     currencies: "currencies",
   }),
-
-  created() {},
 };
 </script>
 
 <template>
-  <div class="border w-fit mx-auto p-20 flex flex-col">
-    <!-- component b -->
+  <div class="w-fit mx-auto p-20 flex flex-col">
+    <!-- COMPONENT B-->
     <CostTable />
 
-    <div class="self-end flex gap-7 mt-5 h-auto">
+    <div class="self-end flex gap-7 h-auto bg-semiwhite w-full mt-10 justify-end py-5 rounded-sm">
       <Button :cancel="true" />
       <Button :draft="true" />
       <Button :submit="true" />
