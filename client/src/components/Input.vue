@@ -16,6 +16,8 @@ export default {
     attention: Boolean,
     quotation: Boolean,
     vendorAddress: Boolean,
+    customerContract: Boolean,
+    customerPO: Boolean,
   },
 };
 </script>
@@ -53,18 +55,41 @@ export default {
     type="number"
   />
 
-  <label v-else-if="attention" class="flex flex-col items-center  w-fit">
+  <label v-else-if="attention" class="flex flex-col items-center w-fit">
     <span class="self-start capitalize">attention of</span>
-    <input placeholder="0" class="w-[6rem] p-3 ml-[.7rem] bg-semiwhite rounded-sm" type="text" />
+    <input placeholder="John Smith" class="w-[10rem] p-3 bg-semiwhite rounded-sm" type="text" />
   </label>
 
-  <label v-else-if="quotation" class="flex flex-col items-center  w-fit">
+  <label v-else-if="quotation" class="flex flex-col items-center w-fit">
     <span class="self-start capitalize">quotation no.</span>
-    <input placeholder="0" class="w-[6rem] p-3 ml-[.7rem] bg-semiwhite rounded-sm" type="text" />
+    <input placeholder="0" class="w-[10rem] p-3 bg-semiwhite rounded-sm" type="text" />
   </label>
-  <label v-else-if="vendorAddress" class="flex flex-col items-center ">
+
+  <label v-else-if="vendorAddress" class="flex flex-col items-center">
     <span class="self-start capitalize">vendor address</span>
-    <input placeholder="0" class="w-full p-3 ml-[.7rem] bg-semiwhite rounded-sm" type="text" />
+    <input
+      placeholder="Marubeni-Itochu Tublars Asia Pte Ltd (2 Shenton Way, SGX Centre 1, #07-01-(S) (068804)"
+      class="w-full p-3 bg-semiwhite rounded-sm"
+      type="text"
+    />
+  </label>
+
+  <label v-else-if="customerContract" class="flex flex-col items-center">
+    <span class="self-start capitalize">vendor address</span>
+    <input
+      placeholder="Marubeni-Itochu Tublars Asia Pte Ltd (2 Shenton Way, SGX Centre 1, #07-01-(S) (068804)"
+      class="w-full p-3 bg-semiwhite rounded-sm"
+      type="text"
+    />
+  </label>
+
+  <label v-else-if="customerPO" class="flex flex-col items-center mt-2">
+    <span class="self-start capitalize">vendor address</span>
+    <input
+      placeholder="Marubeni-Itochu Tublars Asia Pte Ltd (2 Shenton Way, SGX Centre 1, #07-01-(S) (068804)"
+      class="w-full p-3 bg-semiwhite rounded-sm"
+      type="text"
+    />
   </label>
 </template>
 <style>

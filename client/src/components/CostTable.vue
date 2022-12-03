@@ -8,17 +8,18 @@ export default {
   },
 };
 </script>
-
 <template>
-  <div class="w-fit mx-auto">
-    <div class="relative w-[8em]">
-      <h1 id="cost" class="font-bold text-lg text-primary capitalize">cost detail</h1>
-      <ChevronIcon :costDetailHeader="true" />
+  <div class="w-fit mx-auto border">
+    <div class="px-2 h-6">
+      <div class="relative w-[8em]">
+        <h1 id="cost" class="font-bold text-lg text-primary capitalize">cost detail</h1>
+        <ChevronIcon :costDetailHeader="true" />
+      </div>
     </div>
     <table class="table-fixed h-fit border-collapse p-1 pb-0 mt-2">
       <thead class="bg-secondary">
         <tr class="text-sm text-left w-[20rem] p-2">
-          <th class="border-t border-l w-[14rem]">Description</th>
+          <th class="border-t  w-[14rem]">Description</th>
           <th class="w-[5rem] border-t pl-6">Qty</th>
           <th class="w-[5rem] pl-10 border-t">UOM</th>
           <th class="w-[6.9rem] pl-10 border-t">Unit Price</th>
@@ -30,16 +31,16 @@ export default {
           <th class="border-t">Sub Total</th>
           <th class="border-t">Total</th>
           <th class="pl-5 border-t">Charge To</th>
-          <th class="border-r border-t"></th>
+          <th class="border-t"></th>
         </tr>
       </thead>
-      <tbody class="border border-cyan-400">
+      <tbody>
         <CostRow />
         <CostRow />
         <CostRow />
       </tbody>
     </table>
-    <div class="flex justify-between border-l border-r border-b">
+    <div class="flex justify-between">
       <div class="flex gap-7 mt-3">
         <h2 class="capitalize pl-2 text-gray-500 font-bold">
           exchange rate 1 <span class="text-gray-500 font-bolduppercase">usd</span> =

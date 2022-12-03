@@ -39,8 +39,8 @@ export default {
       {{ data.name }}
     </option>
   </select>
-  <div v-else-if="logistic" class="ml-10">
-    <select name="logistic" id="logistic" class="w-full p-3 bg-semiwhite relative pl-[2rem]">
+  <div v-else-if="logistic" class="ml-4 relative">
+    <select name="logistic" id="logistic" class="w-[13rem] p-3 bg-semiwhite pl-[2rem]">
       <option value="lov">Logistic Instruction</option>
       <option value="lig">asdlkj</option>
     </select>
@@ -48,7 +48,7 @@ export default {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      class="w-7 h-7 text-primary absolute top-9 left-19 fill-primary"
+      class="w-7 h-7 text-primary absolute top-3 fill-primary"
     >
       <path
         d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 116 0h3a.75.75 0 00.75-.75V15z"
@@ -76,7 +76,6 @@ export default {
       {{ data.name }}
     </option>
   </select>
-
   <select
     v-else-if="chargeTo"
     name="currency"
@@ -91,14 +90,14 @@ export default {
 
   <label v-else-if="vendor" class="flex flex-col items-center w-fit">
     <span class="self-start capitalize">assigned vendor</span>
-    <select name="vendor" id="vendor" class="w-[14rem] p-3 bg-semiwhite capitalize">
+    <select name="vendor" id="vendor" class="w-[20rem] p-3 bg-semiwhite capitalize">
       <option value="" disabled selected>Amarit & associate logistics co ltd</option>
     </select>
   </label>
 
   <label v-else-if="invoice" class="flex flex-col items-center w-fit">
     <span class="self-start capitalize">invoice to</span>
-    <select name="invoice" id="invoice" class="w-[14rem] p-3 bg-semiwhite capitalize">
+    <select name="invoice" id="invoice" class="w-[10rem] p-3 bg-semiwhite capitalize">
       <option value="" disabled selected>MITO</option>
     </select>
   </label>

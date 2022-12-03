@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <tr class="border">
+  <tr class="">
     <td class="drop-shadow-custom" id="description">
       <Input :description="true" />
     </td>
