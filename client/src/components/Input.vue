@@ -12,6 +12,10 @@ export default {
     vat: Boolean,
     total: Boolean,
     chargeTo: Boolean,
+    vendor: Boolean,
+    attention: Boolean,
+    quotation: Boolean,
+    vendorAddress: Boolean,
   },
 };
 </script>
@@ -48,9 +52,23 @@ export default {
     class="w-[6rem] p-3 ml-[.7rem] bg-semiwhite rounded-sm"
     type="number"
   />
+
+  <label v-else-if="attention" class="flex flex-col items-center  w-fit">
+    <span class="self-start capitalize">attention of</span>
+    <input placeholder="0" class="w-[6rem] p-3 ml-[.7rem] bg-semiwhite rounded-sm" type="text" />
+  </label>
+
+  <label v-else-if="quotation" class="flex flex-col items-center  w-fit">
+    <span class="self-start capitalize">quotation no.</span>
+    <input placeholder="0" class="w-[6rem] p-3 ml-[.7rem] bg-semiwhite rounded-sm" type="text" />
+  </label>
+  <label v-else-if="vendorAddress" class="flex flex-col items-center ">
+    <span class="self-start capitalize">vendor address</span>
+    <input placeholder="0" class="w-full p-3 ml-[.7rem] bg-semiwhite rounded-sm" type="text" />
+  </label>
 </template>
 <style>
 input::placeholder {
-  color: black
+  color: black;
 }
 </style>
